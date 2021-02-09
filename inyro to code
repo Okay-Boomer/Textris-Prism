@@ -14,7 +14,7 @@ prizm.PrizmBegin();   // initialize the PRIZM controller
 
 
 void loop() {     // repeat this code in a loop
-int distance = prizm.readSonicSensorCM(1);
+int distance = prizm.readSonicSensorCM(2);
    
    if (distance < 5) {
   DangerLight();
