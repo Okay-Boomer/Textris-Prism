@@ -1,0 +1,31 @@
+#include <PRIZM.h>
+PRIZM prizm;
+
+void setup() {
+prizm.PrizmBegin(); 
+
+}
+
+void loop() {
+  Forward(1000);
+while ( prizm.readSonicSensorCM(3) >5){
+  if ( prizm.readLineSensor(5) >5) {
+   //Turn Right
+  } else {
+   // Turn Left
+  }
+}
+}
+
+void Forward (int time) {
+  prizm.setMotorPower (50,50);
+  delay(time);
+}
+void Right (int time) {
+  prizm.setMotorPower (35,-35);
+  delay(time);
+}
+ void l (int time) {
+  prizm.setMotorPower (-35,35);
+  delay(time);
+}
